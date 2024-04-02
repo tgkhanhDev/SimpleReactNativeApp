@@ -1,0 +1,28 @@
+Các hook: 
+    useState: Hook này cho phép bạn sử dụng state trong functional component.
+
+    useEffect: Hook này cho phép bạn thực hiện các side effects trong functional component. Điều này bao gồm việc thực hiện các tác vụ như gửi request HTTP, đăng ký event listeners, và làm sạch up khi component unmounts.
+
+    useContext: Hook này cho phép bạn truy cập vào context của React trong functional component.
+
+    useReducer: Hook này cho phép bạn quản lý state bằng cách sử dụng một reducer, tương tự như cách bạn sử dụng reducer trong Redux.
+
+    useCallback: Hook này giúp bạn tránh việc tạo lại các hàm callback mỗi khi component re-renders.
+
+    useMemo: Hook này giúp bạn tránh việc tính toán lại các giá trị mỗi khi component re-renders bằng cách lưu trữ kết quả của tính toán trước đó.
+
+    useRef: Hook này cho phép bạn tham chiếu đến một phần tử DOM hoặc một instance của component.
+
+    useImperativeHandle: Hook này cho phép bạn tuỳ chỉnh giá trị mà ref hiện tại trỏ đến.
+
+    useLayoutEffect: Hook này hoạt động tương tự như useEffect, nhưng chạy đồng bộ sau khi tất cả các DOM mutations đã được áp dụng.
+
+    useDebugValue: Hook này giúp bạn debug custom hooks bằng cách hiển thị giá trị của hook trong DevTools.
+
+1. Các Component thường sử dụng (4h)
+  1. View : như một thẻ div bình thường (Ko thể scroll, để scroll cần có SCROLLVIEW bọc bên ngoài)
+  2. Text
+  3. Image
+  4. Button
+  5. TouchableOpacity
+  6. Flatlist 
