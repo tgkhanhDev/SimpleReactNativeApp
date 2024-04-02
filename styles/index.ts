@@ -52,6 +52,25 @@ export const styles = StyleSheet.create({
   //End Sub-body
 
   //Start Sub-body
+  bodyContainer:{
+    flex:1,
+    borderColor: 'black',
+    borderWidth: 1,
+    padding:10,
+    gap:10,
+    height: 300,
+  },
+  itemContainer:{
+
+    flexDirection: 'row',
+    borderColor: 'black',
+    borderWidth: 1,
+    padding:10,
+    borderRadius: 10,
+  }
+  // itemButtonContainer{
+
+  // }
   //End Sub-body
 });
 
