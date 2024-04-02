@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {Image, User} from '../templates/headPage';
 import styles from '../../styles';
+import { Image, User } from '../templates';
 
 export const HeadLayout = () => {
   return (

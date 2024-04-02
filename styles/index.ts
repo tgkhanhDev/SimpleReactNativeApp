@@ -6,9 +6,10 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'black',
   },
+  // Start Header
   imageContainer: {
     flex: 1,
-    borderWidth: 2,
+    borderWidth: 1.5,
     borderColor: 'black',
     justifyContent: 'center',
     alignItems: 'center',
@@ -19,12 +20,39 @@ export const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'flex-start',
-    padding: 10
+    padding: 10,
   },
   headLayoutStyle: {
     flex: 1,
     flexDirection: 'row',
   },
+  //End Header
+
+  //Start Sub-body
+  totalContainer: {
+    marginVertical: 10,
+    flex: 1,
+    flexDirection: 'row',
+  },
+  total_Y: {
+    flex: 1,
+    width: '90%',
+    borderWidth: 1.5,
+    borderColor: 'black',
+    borderRadius: 5,
+    fontSize: 20,
+    paddingVertical: 3,
+    paddingHorizontal: 5,
+  },
+  totalStyle: {
+    fontWeight: 'bold',
+    justifyContent:'flex-end',
+    fontSize: 25
+  },
+  //End Sub-body
+
+  //Start Sub-body
+  //End Sub-body
 });
 
 export default styles;
