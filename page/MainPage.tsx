@@ -1,27 +1,22 @@
 import React from 'react';
 import {Dimensions, ScrollView, StyleSheet, Text} from 'react-native';
 import MainLayout from '../components/layout/MainLayout';
+import styles from '../styles';
 
 //Get VW, VH:
 const {width: viewportWidth} = Dimensions.get('screen');
 
-const Styles = StyleSheet.create({
-  titleText: {
-    fontSize: 30,
-    backgroundColor: 'gray',
-    color: '#f6f6f6',
-    height: 3 * viewportWidth,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 5,
-    borderColor: 'pink',
-  },
-});
+// const Styles = StyleSheet.create({
+//   titleText: {
+//     backgroundColor: '#5989c1ecfe',
+//     borderWidth: 2,
+//     borderColor: 'black',
+//   },
+// });
 
 export const mainPage = () => {
   return (
-    <ScrollView>
+    <ScrollView style={styles.mainLayoutStyle}>
       <MainLayout />
     </ScrollView>
   );

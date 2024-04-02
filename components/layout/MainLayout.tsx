@@ -1,10 +1,13 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
+import { HeadLayout } from '.'
 
 export const MainLayout = () => {
   return (
-    <Text>MainLayout</Text>
-  )
+    <View style={{padding:10}}>
+      <HeadLayout />
+    </View>
+  );
 }
 
 export default MainLayout
