@@ -1,2 +1,2 @@
-export * from './Image'
+export * from './ImageAvatar'
 export * from './User'

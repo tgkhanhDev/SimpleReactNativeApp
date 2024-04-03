@@ -1,13 +1,25 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import styles from '../../../styles';
+// import {useDispatch} from 'react-redux';
+import { addCartAction } from '../../../store/formCRUD/formAction';
+import { itemType } from '../../../type';
 
-export const Item = ({itemScript}: {itemScript?: string}) => {
-  itemScript = itemScript || 'Default Item';
+export const Item = ( {itemInfo} : {itemInfo:string}  ) => {
+  // default value ========={itemInfo}: {itemInfo:itemType}
+
+  // const dispatch = useDispatch();
+
   return (
     <View style={styles.itemContainer}>
-      <Text style={{flex: 1, fontSize: 25}}>{itemScript}</Text>
-      <View style={{flexDirection: 'row', justifyContent:'center', alignItems:'center', gap: 10}}>
+      <Text style={{flex: 1, fontSize: 25}}>{itemInfo}</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 10,
+        }}>
         <TouchableOpacity
           style={{
             backgroundColor: 'lime',
@@ -15,7 +27,9 @@ export const Item = ({itemScript}: {itemScript?: string}) => {
             height: 30,
             borderRadius: 50,
             borderWidth: 1,
-          }}></TouchableOpacity>
+          }}
+          // onPress={() => dispatch(addCartAction())}
+        ></TouchableOpacity>
         <TouchableOpacity
           style={{
             backgroundColor: 'blue',

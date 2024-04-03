@@ -16,6 +16,10 @@ export const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
+  avatar: {
+    width: '100%',
+    height: '100%'
+  },
   UserContainer: {
     flex: 2,
     justifyContent: 'center',
@@ -46,28 +50,28 @@ export const styles = StyleSheet.create({
   },
   totalStyle: {
     fontWeight: 'bold',
-    justifyContent:'flex-end',
-    fontSize: 25
+    justifyContent: 'flex-end',
+    fontSize: 25,
   },
   //End Sub-body
 
   //Start Sub-body
-  bodyContainer:{
-    flex:1,
+  bodyContainer: {
+    flex: 1,
     borderColor: 'black',
     borderWidth: 1,
-    padding:10,
-    gap:10,
+    padding: 10,
+    gap: 10,
     height: 300,
   },
-  itemContainer:{
-
+  itemContainer: {
     flexDirection: 'row',
     borderColor: 'black',
     borderWidth: 1,
-    padding:10,
+    padding: 10,
     borderRadius: 10,
-  }
+    marginVertical: 5,
+  },
   // itemButtonContainer{
 
   // }

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styles from '../../styles';
-import { Image, User } from '../templates';
+import {ImageAvatar, User } from '../templates';
 
 export const HeadLayout = () => {
   return (
     <View style={styles.headLayoutStyle}>
-      <Image />
+      <ImageAvatar />
       <User />
     </View>
   );
