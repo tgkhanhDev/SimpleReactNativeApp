@@ -1,7 +1,13 @@
 
-export const addCartAction = (payload:any) => {
+export const addItemAction = (payload:any) => {
   return {
     type: 'ADDTOCART',
-    payload
+    payload,
   };
 }
+export const deleteItemAction = (payload: any) => {
+  return {
+    type: 'DELETEITEM',
+    payload,
+  };
+};

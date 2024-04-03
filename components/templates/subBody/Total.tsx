@@ -1,8 +1,13 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styles from '../../../styles';
+import {useSelector} from 'react-redux';
+import { RootState } from '../../../store';
 
 export const Total = () => {
+
+  const {} = useSelector( (state:RootState) => state.formCRUD);
+
   return (
     <View style={styles.totalContainer}>
       <View style={{flex: 1}}>

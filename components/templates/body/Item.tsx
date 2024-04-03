@@ -1,18 +1,18 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import styles from '../../../styles';
-// import {useDispatch} from 'react-redux';
-import { addCartAction } from '../../../store/formCRUD/formAction';
-import { itemType } from '../../../type';
+import {useDispatch} from 'react-redux';
+import {addItemAction, deleteItemAction} from '../../../store/formCRUD/formAction';
+import {itemType} from '../../../type';
 
-export const Item = ( {itemInfo} : {itemInfo:string}  ) => {
-  // default value ========={itemInfo}: {itemInfo:itemType}
-
-  // const dispatch = useDispatch();
+export const Item = ({itemInfo}: {itemInfo: itemType}) => {
+  const dispatch = useDispatch();
 
   return (
     <View style={styles.itemContainer}>
-      <Text style={{flex: 1, fontSize: 25}}>{itemInfo}</Text>
+      <Text style={{flex: 1, fontSize: 25}}>
+        {itemInfo.title}---{itemInfo.price}$
+      </Text>
       <View
         style={{
           flexDirection: 'row',
@@ -28,8 +28,9 @@ export const Item = ( {itemInfo} : {itemInfo:string}  ) => {
             borderRadius: 50,
             borderWidth: 1,
           }}
-          // onPress={() => dispatch(addCartAction())}
-        ></TouchableOpacity>
+          onPress={() =>
+            dispatch(addItemAction(itemInfo))
+          }></TouchableOpacity>
         <TouchableOpacity
           style={{
             backgroundColor: 'blue',
@@ -45,7 +46,10 @@ export const Item = ( {itemInfo} : {itemInfo:string}  ) => {
             height: 30,
             borderRadius: 50,
             borderWidth: 1,
-          }}></TouchableOpacity>
+          }}
+          onPress={() =>
+            dispatch(deleteItemAction(itemInfo))
+          }></TouchableOpacity>
       </View>
     </View>
   );

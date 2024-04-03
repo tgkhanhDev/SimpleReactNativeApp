@@ -1,22 +1,25 @@
-const initialState = {
+import {formStateType, itemType} from '../../type';
+
+const initialState: formStateType = {
   cart: [],
 };
 
 export const formReducer = (
   state = initialState,
-  {type, payload}: {type: String; payload: any},
+  {type, payload}: {type: string; payload: itemType},
 ) => {
   switch (type) {
     case 'ADDTOCART':
       console.log('ADDTOCART');
-
-      break;
+      // state.cart.push(payload);
+      console.log(payload);
+      
+      return {...state};
     case 'DELETEITEM':
       console.log('DELETEITEM');
-
-      break;
+      return {...state};
     default:
-      break;
+      return 3;
   }
 };
-export default formReducer
+export default formReducer;
