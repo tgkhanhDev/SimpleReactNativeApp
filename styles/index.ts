@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   mainLayoutStyle: {
+    height:"100%",
     backgroundColor: '#9dc8e3',
     borderWidth: 2,
     borderColor: 'black',
@@ -27,7 +28,6 @@ export const styles = StyleSheet.create({
     padding: 10,
   },
   headLayoutStyle: {
-    flex: 1,
     flexDirection: 'row',
   },
   //End Header
@@ -35,7 +35,6 @@ export const styles = StyleSheet.create({
   //Start Sub-body
   totalContainer: {
     marginVertical: 10,
-    flex: 1,
     flexDirection: 'row',
   },
   total_Y: {
@@ -57,12 +56,12 @@ export const styles = StyleSheet.create({
 
   //Start Sub-body
   bodyContainer: {
-    flex: 1,
+    margin: 10,
     borderColor: 'black',
     borderWidth: 1,
     padding: 10,
     gap: 10,
-    height: 300,
+    height: "70%",
   },
   itemContainer: {
     flexDirection: 'row',

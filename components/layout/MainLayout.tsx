@@ -4,7 +4,7 @@ import { BodyLayout, HeadLayout, SubBodyLayout } from '.'
 
 export const MainLayout = () => {
   return (
-    <View style={{padding:10}}>
+    <View style={{padding: 10}}>
       <HeadLayout />
       <SubBodyLayout />
       <BodyLayout />

@@ -11,3 +11,9 @@ export const deleteItemAction = (payload: any) => {
     payload,
   };
 };
+export const addRandomAction = (payload: any) => {
+  return {
+    type: 'ADDRANDOM',
+    payload,
+  };
+};

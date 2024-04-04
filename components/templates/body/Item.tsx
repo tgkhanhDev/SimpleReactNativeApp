@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import styles from '../../../styles';
 import {useDispatch} from 'react-redux';
-import {addItemAction, deleteItemAction} from '../../../store/formCRUD/formAction';
+import {addItemAction, addRandomAction, deleteItemAction} from '../../../store/formCRUD/formAction';
 import {itemType} from '../../../type';
 
 export const Item = ({itemInfo}: {itemInfo: itemType}) => {
@@ -11,7 +11,7 @@ export const Item = ({itemInfo}: {itemInfo: itemType}) => {
   return (
     <View style={styles.itemContainer}>
       <Text style={{flex: 1, fontSize: 25}}>
-        {itemInfo.title}---{itemInfo.price}$
+        {itemInfo.id}-{itemInfo.title}---{itemInfo.price}$
       </Text>
       <View
         style={{
@@ -28,9 +28,7 @@ export const Item = ({itemInfo}: {itemInfo: itemType}) => {
             borderRadius: 50,
             borderWidth: 1,
           }}
-          onPress={() =>
-            dispatch(addItemAction(itemInfo))
-          }></TouchableOpacity>
+          onPress={() => dispatch(addItemAction(itemInfo))}></TouchableOpacity>
         <TouchableOpacity
           style={{
             backgroundColor: 'blue',
@@ -38,7 +36,10 @@ export const Item = ({itemInfo}: {itemInfo: itemType}) => {
             height: 30,
             borderRadius: 50,
             borderWidth: 1,
-          }}></TouchableOpacity>
+          }}
+          onPress={() =>
+            dispatch(addRandomAction(itemInfo))
+          }></TouchableOpacity>
         <TouchableOpacity
           style={{
             backgroundColor: 'red',

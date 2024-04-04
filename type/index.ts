@@ -5,6 +5,11 @@ export interface itemType {
 }
 [];
 
+export interface cartType{
+  item: itemType,
+  quantity: number
+}[]
+
 export interface formStateType{
-  cart : itemType[]
+  cart ?: cartType[]
 }
