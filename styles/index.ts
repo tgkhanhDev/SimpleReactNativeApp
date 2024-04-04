@@ -61,7 +61,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     gap: 10,
-    height: "70%",
+    height: "60%",
   },
   itemContainer: {
     flexDirection: 'row',
